@@ -15,7 +15,7 @@ app.get('/', function(req,res) {
 	var ord = JSON.stringify(Math.random()*1000);
 	var i = ord.indexOf('.');
 	ord = 'ORD'+ ord.substr(0,i);	
-	res.render(__dirname + '/checkout.html', {orderid:ord});
+	res.render(__dirname + '/index.html', {orderid:ord});
 	
 });
 	
