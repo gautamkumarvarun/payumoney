@@ -38,7 +38,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     </div>
 	<form action="#" id="payment_form">
     <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_NODE_JS" />
-    <input type="hidden" id="surl" name="surl" value="http://localhost:3000/response.html" />
+    <input type="hidden" id="surl" name="surl" value="https://gautamkumarvarun.github.io/payumoney/response.html" />
     <div class="dv">
     <span class="text"><label>Merchant Key:</label></span>
     <span><input type="text" id="key" name="key" placeholder="Merchant Key" value="" /></span>
@@ -91,7 +91,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 <script type="text/javascript"><!--
 $('#payment_form').bind('keyup blur', function(){
 	$.ajax({
-          url: 'http://localhost:3000',
+          url: 'https://gautamkumarvarun.github.io/payumoney',
           type: 'post',
           data: JSON.stringify({ 
             key: $('#key').val(),
