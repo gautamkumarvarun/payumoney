@@ -38,7 +38,9 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
     </div>
 	<form action="#" id="payment_form">
     <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_NODE_JS" />
-    <input type="hidden" id="surl" name="surl" value="https://gautamkumarvarun.github.io/notesworld.in/" />  
+    <input type="hidden" id="surl" name="surl" value="https://gautamkumarvarun.github.io/notesworld.in/response.html" />  
+    <input type="hidden" id="surl" name="furl" value="https://gautamkumarvarun.github.io/notesworld.in/response.html1" />  
+		
     <div><input type="submit" value="Pay" onclick="launchBOLT();" /></div>
 	</form>
 </div>
@@ -80,8 +82,8 @@ function launchBOLT()
 			email: 'gautamkumarvarun027@gmail.com',
 			mobile: '9695965639',
 			udf5: 'abcdefghi'
-	surl : 'https://gautamkumarvarun.github.io/notesworld.in/',
-	furl: 'https://gautamkumarvarun.github.io/notesworld.in/'
+	surl : $('#surl').val(),
+	furl: $('#surl').val()
 },{ responseHandler: function(BOLT){
 	console.log( BOLT.response.txnStatus );		
 	if(BOLT.response.txnStatus != 'CANCEL')
