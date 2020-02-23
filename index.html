@@ -64,7 +64,7 @@ $('#payment_form').bind('keyup blur', function(){
             fname: 'Gautam',
 			email: 'gautamkumarvarun027@gmail.com',
 			mobile: '9695965639',
-			udf5: 'abcdefghi'
+			udf5: $('#udf5').val()
           }),
 		  contentType: "application/json",
           dataType: 'json',
@@ -87,7 +87,7 @@ function launchBOLT()
             fname: 'Gautam',
 			email: 'gautamkumarvarun027@gmail.com',
 			mobile: '9695965639',
-			udf5: 'abcdefghi',
+			udf5: $('#udf5').val(),
 	surl : $('#surl').val(),
 	furl: $('#furl').val()
 },{ responseHandler: function(BOLT){
@@ -103,7 +103,7 @@ function launchBOLT()
 		'<input type=\"hidden\" name=\"productinfo\" value=\"books\" />' +
 		'<input type=\"hidden\" name=\"firstname\" value=\"Gautam\" />' +
 		'<input type=\"hidden\" name=\"email\" value=\"gautamkumarvarun027@gmail.com\" />' +
-		'<input type=\"hidden\" name=\"udf5\" value=\"abcdefghi\" />' +
+		'<input type=\"hidden\" name=\"udf5\" value=\"'BOLT.response.udf5'\" />' +
 		'<input type=\"hidden\" name=\"mihpayid\" value=\"'+BOLT.response.mihpayid+'\" />' +
 		'<input type=\"hidden\" name=\"status\" value=\"'+BOLT.response.status+'\" />' +
 		'<input type=\"hidden\" name=\"hash\" value=\"'+BOLT.response.hash+'\" />' +
