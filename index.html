@@ -39,7 +39,7 @@ color="e34524" bolt-logo="http://boltiswatching.com/wp-content/uploads/2015/09/B
 	<form action="#" id="payment_form">
     <input type="hidden" id="udf5" name="udf5" value="BOLT_KIT_NODE_JS" />
     <input type="hidden" id="surl" name="surl" value="google.com" />  
-    <input type="hidden" id="surl" name="furl" value="google.com" />  
+    <input type="hidden" id="furl" name="furl" value="google.com" />  
 		
     <div><input type="submit" value="Pay" onclick="launchBOLT();" /></div>
 	</form>
@@ -83,7 +83,7 @@ function launchBOLT()
 			mobile: '9695965639',
 			udf5: 'abcdefghi'
 	surl : $('#surl').val(),
-	furl: $('#surl').val()
+	furl: $('#furl').val()
 },{ responseHandler: function(BOLT){
 	console.log( BOLT.response.txnStatus );		
 	if(BOLT.response.txnStatus != 'CANCEL')
